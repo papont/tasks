@@ -1,8 +1,6 @@
 package ru.papont.tasks.controller;
 
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import ru.papont.tasks.domain.Task;
 import ru.papont.tasks.service.TaskService;
 
@@ -17,7 +15,13 @@ public class TaskController {
     }
 
     @GetMapping(value={"", "/"})
-    Iterable<Task> list() {
+    public Iterable<Task> list() {
         return this.taskService.list();
     }
+
+    @PostMapping("/save")
+    public Task save(@RequestBody Task task) {
+        return this.taskService.save(task);
+    }
+
 }

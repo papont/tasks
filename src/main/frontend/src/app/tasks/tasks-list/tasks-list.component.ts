@@ -25,7 +25,7 @@ export class TasksListComponent implements OnInit {
 
     ngOnInit() {
         this.tasks.push(new Task(1, "Task 1", true, "01.01.2018"));
-        this.tasks.push(new Task(2, "Task 2", true, "01.02.2018"));
+        this.tasks.push(new Task(2, "Task 2", false, "01.02.2018"));
         this.tasks.push(new Task(3, "Task 3", false, "01.02.2018"));
     }
 

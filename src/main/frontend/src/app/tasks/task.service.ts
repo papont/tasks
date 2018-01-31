@@ -10,10 +10,6 @@ export class TaskService {
     }
 
     getTasks() {
-        // return this.http.get('/api/tasks').map(function (response) {
-        //     return response.json();
-        // });
         return this.http.get('/api/tasks').map(response => response.json());
-
     }
 }
